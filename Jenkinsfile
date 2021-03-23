@@ -9,6 +9,7 @@ pipeline {
   stages {
     stage('Installation') {
       steps {
+        sh 'apt install sudo'
         sh 'sudo npm install'
       }
     }
