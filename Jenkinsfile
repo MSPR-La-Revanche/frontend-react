@@ -1,35 +1,34 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'node:6-alpine'
+      args '-p 3000:3000'
+    }
+
+  }
   stages {
-    stage('Install') {
+    stage('Installation') {
       steps {
-        echo 'Running installation...'
-        sh '''export PATH=$PATH:/usr/local/bin/yarn
-node --version
-npm --version
-yarn'''
+        sh 'npm install'
       }
     }
 
-    stage('Tests') {
+    stage('Test') {
       steps {
-        echo 'Running tests...'
-        sh '''export PATH=$PATH:/usr/local/bin/yarn
-which yarn
-npm install --save-dev jest
-npm install --save-dev babel-jest regenerator-runtime
-yarn test'''
+        sh 'npm install --save-dev jest'
+        sh 'npm install --save-dev babel-jest regenerator-runtime'
+        sh 'npm run test'
       }
     }
 
     stage('Build') {
       steps {
-        echo 'Running build...'
-        sh '''export PATH=$PATH:/usr/local/bin/yarn
-which yarn
-yarn build --prod'''
+        sh 'npm run build --prod'
       }
     }
 
+  }
+  environment {
+    CI = 'true'
   }
 }
