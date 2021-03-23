@@ -5,7 +5,8 @@ pipeline {
       steps {
         echo 'Running installation...'
         sh '''export PATH=$PATH:/usr/local/bin/yarn
-which yarn
+node --version
+npm --version
 yarn'''
       }
     }
