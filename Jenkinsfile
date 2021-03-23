@@ -9,21 +9,21 @@ pipeline {
   stages {
     stage('Installation') {
       steps {
-        sh 'npm install'
+        sh 'sudo npm install'
       }
     }
 
     stage('Test') {
       steps {
-        sh 'npm install --save-dev jest'
-        sh 'npm install --save-dev babel-jest regenerator-runtime'
-        sh 'npm run test'
+        sh 'sudo npm install --save-dev jest'
+        sh 'sudo npm install --save-dev babel-jest regenerator-runtime'
+        sh 'sudo npm run test'
       }
     }
 
     stage('Build') {
       steps {
-        sh 'npm run build --prod'
+        sh 'sudo npm run build --prod'
       }
     }
 
