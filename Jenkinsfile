@@ -9,11 +9,7 @@ pipeline {
   stages {
     stage('Installation') {
       steps {
-        sh '''mkdir ~/.npm-global
-npm config set prefix \'~/.npm-global\'
-export PATH=~/.npm-global/bin:$PATH
-source ~/.profile
-npm install'''
+        sh 'npm install'
       }
     }
 
@@ -31,6 +27,9 @@ npm install'''
       }
     }
 
+  }
+  tools {
+    nodejs 'NodeJS'
   }
   environment {
     CI = 'true'
