@@ -9,22 +9,25 @@ pipeline {
   stages {
     stage('Installation') {
       steps {
-        sh 'apt install sudo'
-        sh 'sudo npm install'
+        sh '''mkdir ~/.npm-global
+npm config set prefix \'~/.npm-global\'
+export PATH=~/.npm-global/bin:$PATH
+source ~/.profile
+npm install'''
       }
     }
 
     stage('Test') {
       steps {
-        sh 'sudo npm install --save-dev jest'
-        sh 'sudo npm install --save-dev babel-jest regenerator-runtime'
-        sh 'sudo npm run test'
+        sh 'npm install --save-dev jest'
+        sh 'npm install --save-dev babel-jest regenerator-runtime'
+        sh 'npm run test'
       }
     }
 
     stage('Build') {
       steps {
-        sh 'sudo npm run build --prod'
+        sh 'npm run build --prod'
       }
     }
 
