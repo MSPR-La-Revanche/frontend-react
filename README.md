@@ -1,13 +1,12 @@
 # Frontend React
 
-This is a sample react todo app done step-by-step.
-This sample app was a part of react workshop.
+Partie frontend de l'application
 
 ## Instructions
 
 First clone this repository.
 ```bash
-$ git clone git@github.com:MSPR-2/react-project.git
+$ git clone git@github.com:MSPR-La-Revanche/frontend-react.git
 ```
 
 Install dependencies. Make sure you already have [`nodejs`](https://nodejs.org/en/) & [`npm`](https://www.npmjs.com/) installed in your system.
