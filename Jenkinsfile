@@ -19,6 +19,7 @@ yarn'''
       steps {
         sh '''export PATH=$PATH:/usr/local/bin/yarn
 which yarn
+yarn install --ignore-engines
 npm install --save-dev jest
 npm install --save-dev babel-jest regenerator-runtime
 yarn test'''
