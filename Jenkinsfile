@@ -9,21 +9,27 @@ pipeline {
   stages {
     stage('Installation') {
       steps {
-        sh 'npm install'
+        sh '''export PATH=$PATH:/usr/local/bin/yarn
+which yarn
+yarn'''
       }
     }
 
     stage('Test') {
       steps {
-        sh 'npm install --save-dev jest'
-        sh 'npm install --save-dev babel-jest regenerator-runtime'
-        sh 'npm run test'
+        sh '''export PATH=$PATH:/usr/local/bin/yarn
+which yarn
+npm install --save-dev jest
+npm install --save-dev babel-jest regenerator-runtime
+yarn test'''
       }
     }
 
     stage('Build') {
       steps {
-        sh 'npm run build --prod'
+        sh '''export PATH=$PATH:/usr/local/bin/yarn
+which yarn
+yarn build --prod'''
       }
     }
 
