@@ -21,8 +21,8 @@ yarn'''
         sh '''export PATH=$PATH:/usr/local/bin/yarn
 which yarn
 yarn install --ignore-engines
-yarn add -D jest
-yarn add -D babel-jest regenerator-runtime
+yarn add -D jest --ignore-engines
+yarn add -D babel-jest regenerator-runtime --ignore-engines
 yarn test'''
       }
     }
