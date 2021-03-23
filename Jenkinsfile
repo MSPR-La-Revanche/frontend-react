@@ -11,6 +11,7 @@ pipeline {
       steps {
         sh '''export PATH=$PATH:/usr/local/bin/yarn
 which yarn
+yarn install --ignore-engines
 yarn'''
       }
     }
@@ -30,6 +31,7 @@ yarn test'''
       steps {
         sh '''export PATH=$PATH:/usr/local/bin/yarn
 which yarn
+yarn install --ignore-engines
 yarn build --prod'''
       }
     }
