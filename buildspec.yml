@@ -10,12 +10,12 @@ phases:
    commands:
       - yarn build
 
-reports:
-    jest_reports:
-        files:
-            - junit.xml
-        file-format: JUNITXML
-        base-directory: .test
+#reports:
+#    jest_reports:
+#        files:
+#            - junit.xml
+#        file-format: JUNITXML
+#        base-directory: .test
 
 artifacts:
   files:
