@@ -3,24 +3,24 @@ phases:
   pre_build:
    commands:
      - yarn
-    #  - npm install --save-dev jest
-    #  - npm install --save-dev babel-jest regenerator-runtime
-    #  - yarn test
+     - npm install --save-dev jest
+     - npm install --save-dev babel-jest regenerator-runtime
+     - yarn test
   build:
    commands:
       - yarn build
 
-#reports:
-#    jest_reports:
-#        files:
-#            - junit.xml
-#        file-format: JUNITXML
-#        base-directory: .test
+reports:
+    jest_reports:
+        files:
+            - junit.xml
+        file-format: JUNITXML
+        base-directory: .test
 
 artifacts:
   files:
     - '**/*'
-  discard-paths: yes
+  discard-paths: no
   base-directory: build
 
 
