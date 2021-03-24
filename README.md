@@ -14,6 +14,11 @@ Install dependencies. Make sure you already have [`nodejs`](https://nodejs.org/e
 $ yarn install
 ```
 
+Test it
+```bash
+$ yarn test
+```
+
 Run it
 ```bash
 $ yarn start
