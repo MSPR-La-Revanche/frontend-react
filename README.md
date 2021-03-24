@@ -1,6 +1,6 @@
 # Frontend React
 
-Partie frontend de l'application pour l'upload
+Partie frontend de l'application pour l'upload de fichiers CSV
 
 ## Instructions
 
