@@ -1,6 +1,6 @@
 # Frontend React
 
-Partie frontend de l'application pour l'upload de fichiers CSV pour l'Open Data
+Partie frontend de l'application pour l'upload de fichiers CSV pour envoyer les data sur Open Data
 
 ## Instructions
 
