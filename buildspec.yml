@@ -1,8 +1,8 @@
 version: 0.2
 phases:
-  #pre_build:
-  #  commands:
-     # - yarn
+  pre_build:
+   commands:
+     - yarn
     #  - npm install --save-dev jest
     #  - npm install --save-dev babel-jest regenerator-runtime
     #  - yarn test
