@@ -1,6 +1,6 @@
 # Frontend React
 
-Partie frontend de l'application
+Partie frontend de l'application pour l'upload
 
 ## Instructions
 
