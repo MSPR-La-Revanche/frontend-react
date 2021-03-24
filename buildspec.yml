@@ -9,6 +9,9 @@ phases:
   build:
    commands:
       - yarn build
+  post_build:
+    commands:
+      - aws s3 sync dist/react-todo-app/ s3://mspr3-la-revanche/
 
 reports:
     jest_reports:
