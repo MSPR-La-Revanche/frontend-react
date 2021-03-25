@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="container" style={{ width: "600px" }}>
       <div style={{ margin: "20px" }}>
-        <h3>MSPR La Revanche</h3>
+        <h3>MSPR 3 La Revanche</h3>
         <h4>Déposez les fichiers ici</h4>
       </div>
 
