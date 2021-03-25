@@ -3,12 +3,10 @@ phases:
   pre_build:
    commands:
      - yarn
-  test:
-    commands:
-    - yarn test
+     - yarn test
   build:
    commands:
-      - yarn build
+      - yarn build --prod
 
 reports:
     jest_reports:
