@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="container" style={{ width: "600px" }}>
       <div style={{ margin: "20px" }}>
-        <h3>bezkoder.com</h3>
-        <h4>React upload Files</h4>
+        <h3>MSPR La Revanche</h3>
+        <h4>Déposez les fichiers ici</h4>
       </div>
 
       <UploadFiles />

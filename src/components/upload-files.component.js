@@ -58,7 +58,7 @@ export default class UploadFiles extends Component {
       .catch(() => {
         this.setState({
           progress: 0,
-          message: "Could not upload the file!",
+          message: "Le fichier n'a pas pu être envoyé !",
           currentFile: undefined,
         });
       });
@@ -103,7 +103,7 @@ export default class UploadFiles extends Component {
           disabled={!selectedFiles}
           onClick={this.upload}
         >
-          Upload
+          Envoyer
         </button>
 
         <div className="alert alert-light" role="alert">
@@ -111,7 +111,7 @@ export default class UploadFiles extends Component {
         </div>
 
         <div className="card">
-          <div className="card-header">List of Files</div>
+          <div className="card-header">Liste des fichiers</div>
           <ul className="list-group list-group-flush">
             {fileInfos &&
               fileInfos.map((file, index) => (

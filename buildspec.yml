@@ -7,6 +7,9 @@ phases:
   build:
    commands:
       - yarn build --prod
+  post_build:
+    commands:
+      - aws s3 sync build/ s3://mspr3-la-revanche/
 
 reports:
     jest_reports:
