@@ -1,4 +1,4 @@
-# Application Frontend
+# Application Front-end
 
 ### Set port
 .env
