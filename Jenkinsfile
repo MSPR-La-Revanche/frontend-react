@@ -39,7 +39,7 @@ yarn build --prod'''
 
   }
   tools {
-    nodejs 'NodeJS'
+    nodejs 'Node'
   }
   environment {
     CI = 'true'
