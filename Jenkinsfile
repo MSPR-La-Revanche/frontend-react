@@ -6,11 +6,12 @@ pipeline {
     }
 
   }
-  stage('Initialize'){
+
+  stages {
+      stage('Initialize'){
         def dockerHome = tool 'Docker'
         env.PATH = "${dockerHome}/bin:${env.PATH}"
     }
-  stages {
     stage('Installation') {
       steps {
         sh '''export PATH=$PATH:/usr/local/bin/yarn
