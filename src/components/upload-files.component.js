@@ -40,18 +40,12 @@ export default class UploadFiles extends Component {
         this.setState({
           message: response.data.message,
         });
-      })
-      .then((files) => {
-        this.setState({
-          fileInfos: files.data,
-        });
-      })
-      .catch(() => {
         this.setState({
           progress: 0,
-          message: "Le fichier n'a pas pu être envoyé !",
+          message: "Le fichier a été envoyé !",
           currentFile: undefined,
         });
+        return;
       });
 
     this.setState({
