@@ -17,14 +17,6 @@ export default class UploadFiles extends Component {
     };
   }
 
-  componentDidMount() {
-    UploadService.getFiles().then((response) => {
-      this.setState({
-        fileInfos: response.data,
-      });
-    });
-  }
-
   selectFile(event) {
     this.setState({
       selectedFiles: event.target.files,
